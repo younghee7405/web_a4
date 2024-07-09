@@ -1,0 +1,291 @@
+@charset "utf-8";
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #333;
+    font-family: Arial, "고딕", Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+#wrap {
+    width: 1200px;
+    /* height: 700px; */
+    margin: 0 auto;
+    /* background-color: aqua; */
+    position: relative;
+}
+
+
+/* header영역 */
+#header {
+    height: 100px;
+    /* background-color: bisque; */
+}
+
+.logo {
+    float: left;
+    width: 200px;
+    height: 100px;
+    /* border: 1px solid black; */
+    padding-top: 30px;
+    /* (100-40 / 2 = 30) */
+}
+
+.logo a {}
+
+.logo a img {
+    /* 200*40 */
+}
+
+
+.nav {
+    float: right;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.main {}
+
+.main>li {
+    float: left;
+    position: relative;
+}
+
+.main>li>a {
+    display: block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ff5050;
+    /* color: #5b9bd5; */
+    color: #ffc000;
+}
+
+.main>li:hover>a {
+    background-color: #5b9bd5;
+}
+
+.sub {
+    position: absolute;
+    left: 0;top: 50px;
+    width: 100%;
+    z-index: 11;    
+    display: none;
+}
+
+.sub li {}
+
+.sub li a {
+    display: block;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 800;
+    background: #5b9bd5;
+}
+
+.sub li a:hover {
+    background-color: #ffc000;
+}
+
+.sub_bg{
+    width: 1200px;
+    height: 140px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background: #5b9bd5;
+    z-index: 10;
+    display: none;
+}
+
+/* container영역 */
+#container {
+    height: 500px;
+    /* background-color: teal; */
+}
+
+/* fade  view 영역 */
+.view{
+    height: 300px;
+}
+.fade{
+    height: 300px;
+    position: relative;
+}
+.fade li{
+    width: 100%;height: 300px;
+    position: absolute;
+}
+
+/* contents 영역 */
+.contents {}
+.contents > div{
+    width: 400px;
+    height: 200px;
+    float: left;
+}
+
+.contents h2{
+    width: 100px;
+    height: 35px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    line-height: 35px;
+    background-color: #444;
+    border-radius: 10px 10px 0 0;
+    color: white;
+}
+
+.contents ul{
+    width: 100%;
+    height: 165px;
+    background-color: #444;
+    border-radius: 0 10px 10px;
+    padding: 10px;
+}
+
+.notice{}
+.notice ul{}
+.notice ul li{
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px dotted gray;
+    color: white;
+}
+.notice ul li a{
+    float: left;
+    width: 75%;
+
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;    
+}
+.notice ul li span{
+    float: right;
+}
+
+
+.gallery{}
+.gallery ul{
+    text-align: center;
+}
+.gallery ul li{
+    display: inline-block;
+}
+.gallery ul li a{}
+.gallery ul li a img{
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+.gallery ul li a img:hover{
+    opacity: 1;
+}
+.baro{}
+.baro p{
+    height: 165px;
+    background-color: #444;
+    padding: 4px 0 ;
+}
+.baro p a{}
+.baro p a img{
+    /* 400*156 */
+}
+
+
+
+
+#footer {
+    height: 100px;
+    /* background-color: thistle; */
+}
+
+.f_left{width: 1000px;height: 100px;
+    float: left;
+}
+
+.f_left > div{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.f_menu{border-bottom: 1px solid gray;}
+
+.f_menu a:hover{
+    text-decoration: underline;
+}
+.f_menu a::after{
+    content: "|";
+    padding: 0 10px;
+}
+
+.f_menu a:last-child::after{
+    display: none;
+}
+
+.family{
+    width: 200px;
+    height: 100px;
+    float: left;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.family select{
+    width: 150px;
+    height: 50px;
+    
+}
+
+/* 팝업 영역 */
+
+.popup{
+    width: 400px;height: 500px;
+    background-color: white;
+    border: 10px groove #5b9bd5;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    display: none;
+}
+
+.popup h3{
+    border-bottom: 5px double gray;
+}
+.popup p{
+    padding-top: 20px;
+    line-height: 1.7;
+    text-align: justify;
+}
+.popup .close{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
